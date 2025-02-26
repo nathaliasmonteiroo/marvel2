@@ -1,0 +1,131 @@
+/* Estilos de Reset para margem e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #140557;
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle, #0b0231, #2c0cce);
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+    height: 80%;
+}
+
+/* Seção do Heroi */
+.box-heroi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70%;
+}
+
+.box-info h2 {
+    font-size: 16px;
+}
+
+.box-info h1 {
+    font-size: 17px;
+}
+
+.box-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    gap: 20px;
+    font-family: "Trade Winds", serif;
+    color: #FFD700;
+    font-size: 16px;
+}
+
+.box-heroi img {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para o Accordion */
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20%;
+    margin-top: 70px;
+    width: 100%;
+}
+
+.accordion {
+    background-color: #FF0000;
+    color: #FFD700;
+    font-family: "Trade Winds", serif;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin-bottom: 10px;
+}
+
+.accordion:hover {
+    background-color: rgb(204, 216, 162);
+}
+
+.gaveta {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    width: 300px;
+    color: #FFD700;
+    max-height: 0;
+    transition: max-height 0.4s ease-out;
+}
+
+.accordion.active + .gaveta {
+    display: block;
+    max-height: 1000px;
+}
+
+.accordion:after {
+    content: '\02795';
+    font-size: 13px;
+    color: #000000;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796";
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+

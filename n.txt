@@ -35,3 +35,8 @@ beforeCreate e created: Inicialização de dados ou chamadas de API antes que a 
 beforeMount e mounted: Interações com a DOM, como manipulação de elementos ou inicialização de plugins.
 beforeUpdate e updated: Otimizações ou ações a serem realizadas antes ou após a atualização da UI.
 beforeDestroy e destroyed: Limpeza, cancelamento de assinaturas ou remoção de eventos quando o componente é destruído.
+
+voltar 
+
+ <div class="accordion-container">
+            <div v-for="(content, title) in accordions" :key="title"> 

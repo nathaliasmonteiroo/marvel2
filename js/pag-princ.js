@@ -14,6 +14,7 @@ new Vue({
   },
   methods: { //define os métodos que a instância do Vue pode usar
     async fetchHeroes() {
+      debugger
       const url = `${endpoint}?ts=${ts}&apikey=${publicKey}&hash=${hash}&limit=${heroLimit}`;
       try {
         const response = await fetch(url);

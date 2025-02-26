@@ -6,7 +6,7 @@
   <title>Heróis da Marvel</title>
   <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="pag-princ.css"> 
+  <link rel="stylesheet" href="/css/pag-princ.css"> 
 
 <body>
   <header class="text-white py-4 text-center" style="background-color: #c20505; ">
@@ -17,11 +17,11 @@
     <div class="row">
       <div class="col-md-3 mb-4" v-for="hero in heroes" :key="hero.id">
         <div class="card">
-          <a :href="'pag2/pag2.html?id=' + hero.id">
+          <a :href="'/raiz/pag2.html?id=' + hero.id">
               <img :src="hero.image" :alt="hero.name" class="card-img-top" style="height: 200px; object-fit: cover;">
           </a>
           <div class="card-body text-center" style="background-color: #c20505;">
-              <a :href="'pag2/pag2.html?id=' + hero.id" class="hero-link" style="text-decoration: none;">
+              <a :href="'/raiz/pag2=' + hero.id" class="hero-link" style="text-decoration: none;">
                 <h5 class="card.title" style="color: rgb(216, 236, 34);">{{ hero.name }}</h5>
               </a>
           </div>
@@ -35,6 +35,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-  <script src="pag-princ.js"></script> 
+  <script src="/js/pag-princ.js"></script> 
 </body>
 </html>
