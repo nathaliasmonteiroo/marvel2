@@ -15,7 +15,7 @@
 
   <div id="app" class="container mt-5">
     <div class="row">
-      <div class="col-md-3 mb-4" v-for="hero in heroes" :key="hero.id">
+      <div class="col-md-3 mb-5" v-for="hero in heroes" :key="hero.id">
         <div class="card">
           <a :href="'/raiz/pag2.html?id=' + hero.id">
               <img :src="hero.image" :alt="hero.name" class="card-img-top" style="height: 200px; object-fit: cover;">

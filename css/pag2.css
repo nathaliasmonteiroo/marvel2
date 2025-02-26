@@ -64,8 +64,8 @@ body {
     height: auto;
     max-width: 250px;
     object-fit: cover;
-    border-radius: 8px;
     margin-bottom: 10px;
+    padding-top: 170%;
 }
 
 /* Estilos para o Accordion */
@@ -73,7 +73,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    align-items: center;
     margin-bottom: 20%;
     margin-top: 70px;
     width: 100%;
@@ -129,3 +128,6 @@ p {
     line-height: 1.6;
 }
 
+.box-topo{
+    display: contents;
+}
