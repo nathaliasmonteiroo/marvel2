@@ -1,0 +1,48 @@
+/* Reset de estilos */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle, #0b0231, #2c0cce); 
+  font-family: 'Arial', sans-serif;
+}
+
+header h1 {
+  font-family: 'Mate SC', sans-serif;
+  font-size: 36px;
+}
+
+.card {
+  border-radius: 10px; 
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); 
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+footer {
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+footer p {
+  margin: 0;
+}

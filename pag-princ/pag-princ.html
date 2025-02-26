@@ -1,76 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 01 Vue.js</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heróis da Marvel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="pag-princ.css"> 
 
 <body>
-    <div id="app">
-        <h1>{{ titulo }}</h1>
-       
-        <label for="">Nome</label><br>
-        <input type="text" v-model="nome"><br><br>
+  <header class="text-white py-4 text-center" style="background-color: #c20505; ">
+    <h1>Heróis da Marvel</h1>
+  </header>
 
-        <label for="">Telefone</label><br>
-        <input type="text" v-model="telefone"><br><br>
-
-        <label for="">Deseja receber novidades?</label><br>
-        <input type="radio" value="Sim" v-model="novidades">Sim<br>
-        <input type="radio" value="Não" v-model="novidades">Não<br><br>
-
-        <label for="">Interesses</label><br>
-        <input type="checkbox" value="Futebol" v-model="interesses"> Futebol
-        <input type="checkbox" value="Formula1" v-model="interesses"> Fórmula 1
-        <input type="checkbox" value="Corrida" v-model="interesses"> Corrida
-        <br><br>
-
-        <label for="">Como conheceu?</label><br>
-        <select v-model="conheceu">
-            <option value="">Escolha</option>
-            <option value="Google">Google</option>
-            <option value="TV">TV</option>
-            <option value="Revista">Revista</option>
-        </select>
-        <br><br>
-
-        <button @click="enviar">Enviar</button><br><br>
-
-        <div>
-            <strong>Nome:</strong> {{ nome }}<br>
-            <strong>Telefone:</strong> {{ telefone }}<br>
-            <strong>Novidades:</strong> {{ novidades }}<br>
-            <strong>Interesses:</strong> {{ interesses }}<br>
-            <strong>Conheceu:</strong> {{ conheceu }}<br>
-        </div>
+  <div id="app" class="container mt-5">
+    <div class="row">
+      <div class="col-md-3 mb-4" v-for="hero in heroes" :key="hero.id">
+        <div class="card">
+          <a :href="'pag2/pag2.html?id=' + hero.id">
+              <img :src="hero.image" :alt="hero.name" class="card-img-top" style="height: 200px; object-fit: cover;">
+          </a>
+          <div class="card-body text-center" style="background-color: #c20505;">
+              <a :href="'pag2/pag2.html?id=' + hero.id" class="hero-link" style="text-decoration: none;">
+                <h5 class="card.title" style="color: rgb(216, 236, 34);">{{ hero.name }}</h5>
+              </a>
+          </div>
+      </div>
+      </div>
     </div>
+  </div>
 
-    <script>
-        var app = new Vue({
-            el: "#app",
-            data: {
-                titulo: "Aula 01 - Vuejs",
-                nome: "",
-                telefone: "",
-                novidades: "",
-                interesses: [],
-                conheceu: ""
-            },
-            methods: {
-                enviar() {
-                    console.log("Formulário enviado com os seguintes dados:");
-                    console.log("Nome:", this.nome);
-                    console.log("Telefone:", this.telefone);
-                    console.log("Novidades:", this.novidades);
-                    console.log("Interesses:", this.interesses);
-                    console.log("Como conheceu:", this.conheceu);
-                }
-            }
-        });
-    </script>
+  <footer class="text-white text-center py-3 mt-5" style="background-color: #c20505;">
+    <p>&copy; 2025 Marvel Heroes</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script src="pag-princ.js"></script> 
 </body>
-
 </html>

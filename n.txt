@@ -1,0 +1,37 @@
+//entender//gerenciar o fluxo de execução//
+
+new Vue({
+  el: '#app',
+  data: {
+    message: 'Olá, Vue!'
+  },
+  beforeCreate() {
+    console.log('beforeCreate: A instância está sendo criada...');
+  },
+  created() {
+    console.log('created: A instância foi criada!');
+  },
+  beforeMount() {
+    console.log('beforeMount: A instância vai ser montada no DOM...');
+  },
+  mounted() {
+    console.log('mounted: A instância foi montada no DOM!');
+  },
+  beforeUpdate() {
+    console.log('beforeUpdate: A DOM vai ser atualizada...');
+  },
+  updated() {
+    console.log('updated: A DOM foi atualizada!');
+  },
+  beforeDestroy() {
+    console.log('beforeDestroy: A instância vai ser destruída...');
+  },
+  destroyed() {
+    console.log('destroyed: A instância foi destruída!');
+  }
+});
+
+beforeCreate e created: Inicialização de dados ou chamadas de API antes que a UI seja renderizada.
+beforeMount e mounted: Interações com a DOM, como manipulação de elementos ou inicialização de plugins.
+beforeUpdate e updated: Otimizações ou ações a serem realizadas antes ou após a atualização da UI.
+beforeDestroy e destroyed: Limpeza, cancelamento de assinaturas ou remoção de eventos quando o componente é destruído.
